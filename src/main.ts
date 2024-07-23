@@ -1,13 +1,10 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import PrimeVue from 'primevue/config';
 import Aura from '@primevue/themes/aura';
-import Button from 'primevue/button';
-import Toast from 'primevue/toast';
-import ToastService from 'primevue/toastservice';
 import App from '@/App.vue';
 import router from '@/router';
 
-import PrimeVue from 'primevue/config';
 import AutoComplete from 'primevue/autocomplete';
 import Accordion from 'primevue/accordion';
 import AccordionTab from 'primevue/accordiontab';
@@ -36,7 +33,6 @@ import ConfirmationService from 'primevue/confirmationservice';
 import ContextMenu from 'primevue/contextmenu';
 import DataTable from 'primevue/datatable';
 import DataView from 'primevue/dataview';
-// import DataViewLayoutOptions from 'primevue/dataviewlayoutoptions';
 import DeferredContent from 'primevue/deferredcontent';
 import Dialog from 'primevue/dialog';
 import DialogService from 'primevue/dialogservice';
@@ -108,18 +104,19 @@ import Tooltip from 'primevue/tooltip';
 import Tree from 'primevue/tree';
 import TreeSelect from 'primevue/treeselect';
 import TreeTable from 'primevue/treetable';
-// import TriStateCheckbox from 'primevue/tristatecheckbox';
 import VirtualScroller from 'primevue/virtualscroller';
 
 // import BlockViewer from '@/components/BlockViewer.vue';
 
-// import './assets/main.css';
+// import '@/assets/main.css';
 import '@/assets/styles.scss';
 import 'primeicons/primeicons.css';
 
 const app = createApp(App);
+const pinia = createPinia();
 
 app.use(router);
+app.use(pinia);
 app.use(PrimeVue, {
     ripple: true,
     theme: {
