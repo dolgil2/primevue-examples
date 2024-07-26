@@ -1,7 +1,9 @@
-export const exampleMenu = [
+import { Company, MenuItem, Person } from '@/interfaces';
+
+export const exampleMenu: MenuItem[] = [
     {
         label: 'Home',
-        items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }],
+        items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', route: '/' }],
     },
     {
         label: 'UI Components',
@@ -9,76 +11,76 @@ export const exampleMenu = [
             {
                 label: 'Form Layout',
                 icon: 'pi pi-fw pi-id-card',
-                to: '/uikit/formlayout',
+                route: '/uikit/formlayout',
             },
             {
                 label: 'Input',
                 icon: 'pi pi-fw pi-check-square',
-                to: '/uikit/input',
+                route: '/uikit/input',
             },
             {
                 label: 'Float Label',
                 icon: 'pi pi-fw pi-bookmark',
-                to: '/uikit/floatlabel',
+                route: '/uikit/floatlabel',
             },
             {
                 label: 'Invalid State',
                 icon: 'pi pi-fw pi-exclamation-circle',
-                to: '/uikit/invalidstate',
+                route: '/uikit/invalidstate',
             },
             {
                 label: 'Button',
                 icon: 'pi pi-fw pi-mobile',
-                to: '/uikit/button',
+                route: '/uikit/button',
                 class: 'rotated-icon',
             },
             {
                 label: 'Table',
                 icon: 'pi pi-fw pi-table',
-                to: '/uikit/table',
+                route: '/uikit/table',
             },
-            { label: 'List', icon: 'pi pi-fw pi-list', to: '/uikit/list' },
+            { label: 'List', icon: 'pi pi-fw pi-list', route: '/uikit/list' },
             {
                 label: 'Tree',
                 icon: 'pi pi-fw pi-share-alt',
-                to: '/uikit/tree',
+                route: '/uikit/tree',
             },
             {
                 label: 'Panel',
                 icon: 'pi pi-fw pi-tablet',
-                to: '/uikit/panel',
+                route: '/uikit/panel',
             },
             {
                 label: 'Overlay',
                 icon: 'pi pi-fw pi-clone',
-                to: '/uikit/overlay',
+                route: '/uikit/overlay',
             },
             {
                 label: 'Media',
                 icon: 'pi pi-fw pi-image',
-                to: '/uikit/media',
+                route: '/uikit/media',
             },
             {
                 label: 'Menu',
                 icon: 'pi pi-fw pi-bars',
-                to: '/uikit/menu',
+                route: '/uikit/menu',
                 preventExact: true,
             },
             {
                 label: 'Message',
                 icon: 'pi pi-fw pi-comment',
-                to: '/uikit/message',
+                route: '/uikit/message',
             },
-            { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
+            { label: 'File', icon: 'pi pi-fw pi-file', route: '/uikit/file' },
             {
                 label: 'Chart',
                 icon: 'pi pi-fw pi-chart-bar',
-                to: '/uikit/charts',
+                route: '/uikit/charts',
             },
             {
                 label: 'Misc',
                 icon: 'pi pi-fw pi-circle',
-                to: '/uikit/misc',
+                route: '/uikit/misc',
             },
         ],
     },
@@ -88,7 +90,7 @@ export const exampleMenu = [
             {
                 label: 'Free Blocks',
                 icon: 'pi pi-fw pi-eye',
-                to: '/blocks',
+                route: '/blocks',
                 badge: 'NEW',
             },
             {
@@ -105,7 +107,7 @@ export const exampleMenu = [
             {
                 label: 'PrimeIcons',
                 icon: 'pi pi-fw pi-prime',
-                to: '/utilities/icons',
+                route: '/utilities/icons',
             },
             {
                 label: 'PrimeFlex',
@@ -118,12 +120,12 @@ export const exampleMenu = [
     {
         label: 'Pages',
         icon: 'pi pi-fw pi-briefcase',
-        to: '/pages',
+        route: '/pages',
         items: [
             {
                 label: 'Landing',
                 icon: 'pi pi-fw pi-globe',
-                to: '/landing',
+                route: '/landing',
             },
             {
                 label: 'Auth',
@@ -132,39 +134,39 @@ export const exampleMenu = [
                     {
                         label: 'Login',
                         icon: 'pi pi-fw pi-sign-in',
-                        to: '/auth/login',
+                        route: '/auth/login',
                     },
                     {
                         label: 'Error',
                         icon: 'pi pi-fw pi-times-circle',
-                        to: '/auth/error',
+                        route: '/auth/error',
                     },
                     {
                         label: 'Access Denied',
                         icon: 'pi pi-fw pi-lock',
-                        to: '/auth/access',
+                        route: '/auth/access',
                     },
                 ],
             },
             {
                 label: 'Crud',
                 icon: 'pi pi-fw pi-pencil',
-                to: '/pages/crud',
+                route: '/pages/crud',
             },
             {
                 label: 'Timeline',
                 icon: 'pi pi-fw pi-calendar',
-                to: '/pages/timeline',
+                route: '/pages/timeline',
             },
             {
                 label: 'Not Found',
                 icon: 'pi pi-fw pi-exclamation-circle',
-                to: '/pages/notfound',
+                route: '/pages/notfound',
             },
             {
                 label: 'Empty',
                 icon: 'pi pi-fw pi-circle-off',
-                to: '/pages/empty',
+                route: '/pages/empty',
             },
         ],
     },
@@ -243,7 +245,7 @@ export const exampleMenu = [
             {
                 label: 'Documentation',
                 icon: 'pi pi-fw pi-question',
-                to: '/documentation',
+                route: '/documentation',
             },
             {
                 label: 'Figma',
@@ -266,17 +268,22 @@ export const exampleMenu = [
     },
 ];
 
-export const workMenu = [
+export const workMenu: MenuItem[] = [
     {
         label: '캠페인관리',
         items: [
-            { label: '담당캠페인', icon: 'pi pi-fw pi-heart', to: '/' },
-            { label: '소속캠페인', icon: 'pi pi-fw pi-warehouse', to: '/' },
-            { label: '참조캠페인', icon: 'pi pi-fw pi-tag', to: '/' },
+            {
+                label: '캠페인등록',
+                icon: 'pi pi-fw pi-bolt',
+                route: '/campaign/campcreate',
+            },
+            { label: '담당캠페인', icon: 'pi pi-fw pi-heart', route: '/' },
+            { label: '소속캠페인', icon: 'pi pi-fw pi-warehouse', route: '/' },
+            { label: '참조캠페인', icon: 'pi pi-fw pi-tag', route: '/' },
             {
                 label: '모든캠페인',
                 icon: 'pi pi-fw pi-objects-column',
-                to: '/',
+                route: '/',
             },
         ],
     },
@@ -286,9 +293,9 @@ export const workMenu = [
             {
                 label: '모든보고서',
                 icon: 'pi pi-fw pi-objects-column',
-                to: '/',
+                route: '/',
             },
-            { label: '이번달보고서', icon: 'pi pi-fw pi-heart', to: '/' },
+            { label: '이번달보고서', icon: 'pi pi-fw pi-heart', route: '/' },
         ],
     },
     {
@@ -297,36 +304,246 @@ export const workMenu = [
             {
                 label: '모든매출입',
                 icon: 'pi pi-fw pi-objects-column',
-                to: '/',
+                route: '/',
             },
-            { label: '이번달청구', icon: 'pi pi-fw pi-heart', to: '/' },
+            { label: '이번달청구', icon: 'pi pi-fw pi-heart', route: '/' },
         ],
     },
 ];
 
-export const campMenu = [
+export const campMenu: MenuItem[] = [
     {
         label: '캠페인',
         items: [
-            { label: '요약', icon: 'pi pi-fw pi-chart-pie', to: '/' },
-            { label: '캠페인 목록', icon: 'pi pi-fw pi-list', to: '/' },
+            {
+                label: '요약',
+                icon: 'pi pi-fw pi-chart-pie',
+                route: '/campaign/campsummary',
+            },
+            {
+                label: '캠페인 목록',
+                icon: 'pi pi-fw pi-list',
+                route: '/campaign/camptable',
+            },
+        ],
+    },
+    {
+        label: '거래처',
+        items: [
+            {
+                label: '고객사목록',
+                icon: 'pi pi-fw pi-users',
+                route: '/campaign/company',
+            },
+            {
+                label: '고객목록',
+                icon: 'pi pi-fw pi-user',
+                route: '/campaign/client',
+            },
         ],
     },
 ];
 
-export const mediaMenu = [
+export const mediaMenu: MenuItem[] = [
     {
         label: '미디어',
         items: [
-            { label: '요약', icon: 'pi pi-fw pi-chart-bar', to: '/' },
-            { label: '미디어 목록', icon: 'pi pi-fw pi-list', to: '/' },
+            { label: '운영현황', icon: 'pi pi-fw pi-chart-bar', route: '/' },
+            { label: '요약 및 통계', icon: 'pi pi-fw pi-list', route: '/' },
+        ],
+    },
+    {
+        label: '공항',
+        items: [
+            { label: '김포공항', icon: 'pi pi-fw pi-chart-line', route: '/' },
+            { label: '제주공항', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '광주공항', icon: 'pi pi-fw pi-list', route: '/' },
+        ],
+    },
+
+    {
+        label: '디지털',
+        items: [
+            { label: '야립D', icon: 'pi pi-fw pi-chart-line', route: '/' },
+            { label: '파노라마', icon: 'pi pi-fw pi-chart-line', route: '/' },
+            { label: '스크린', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '헬로로데오', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '헬로명동', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '지디아', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '동대문APM', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '소피텔', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '성수234', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '오르페오', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '코네스트', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '국호빌딩', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '인스파이어', icon: 'pi pi-fw pi-list', route: '/' },
+        ],
+    },
+    {
+        label: '프린트',
+        items: [
+            { label: '야립', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '사운즈한남', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '나인원한남', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '이태원178', icon: 'pi pi-fw pi-chart-line', route: '/' },
+            { label: '금호타운', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '금하초경', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '성광빌딩', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '신한상가', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '더플라자', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '대양빌딩', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '버스', icon: 'pi pi-fw pi-list', route: '/' },
+        ],
+    },
+    {
+        label: 'KT',
+        items: [
+            { label: '가로변쉘터', icon: 'pi pi-fw pi-chart-line', route: '/' },
+            { label: '디지털쉘터', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '타운보드', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '신분당선D', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '신분당선', icon: 'pi pi-fw pi-list', route: '/' },
+        ],
+    },
+    {
+        label: '현대퓨쳐넷',
+        items: [
+            { label: '현대백화점천호', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '현대백화점삼성', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '디지털갤러리', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '더현대서울', icon: 'pi pi-fw pi-list', route: '/' },
+            { label: '한섬빌딩', icon: 'pi pi-fw pi-list', route: '/' },
         ],
     },
     {
         label: '관리메뉴',
         items: [
-            { label: '요약', icon: 'pi pi-fw pi-chart-line', to: '/' },
-            { label: '미디어 목록', icon: 'pi pi-fw pi-list', to: '/' },
+            { label: '요약', icon: 'pi pi-fw pi-chart-line', route: '/' },
+            { label: '미디어 목록', icon: 'pi pi-fw pi-list', route: '/' },
         ],
+    },
+];
+
+export const companyList: Company[] = [
+    {
+        id: 1,
+        name: '삼성전자',
+        regNo: '123-45-67890',
+        repName: '이재용',
+        address: '서울특별시 강남구 서초대로 74길 11',
+        createdAt: new Date('2021-01-01T10:00:00Z'),
+        updatedAt: new Date('2023-01-01T10:00:00Z'),
+        bankAccount: '123-456-789',
+        isMediaCom: false,
+    },
+    {
+        id: 2,
+        name: 'LG화학',
+        regNo: '987-65-43210',
+        repName: '신학철',
+        address: '서울특별시 영등포구 여의대로 128',
+        createdAt: new Date('2022-02-02T11:00:00Z'),
+        updatedAt: new Date('2023-02-02T11:00:00Z'),
+        isMediaCom: false,
+    },
+    {
+        id: 3,
+        name: '네이버',
+        regNo: '456-12-34567',
+        repName: '한성숙',
+        address: '경기도 성남시 분당구 불정로 6',
+        createdAt: new Date('2020-03-03T12:00:00Z'),
+        updatedAt: new Date('2023-03-03T12:00:00Z'),
+        bankAccount: '789-123-456',
+        isMediaCom: true,
+    },
+    {
+        id: 4,
+        name: '카카오',
+        regNo: '321-54-98765',
+        repName: '여민수',
+        address: '제주특별자치도 제주시 첨단로 242',
+        createdAt: new Date('2019-04-04T13:00:00Z'),
+        updatedAt: new Date('2023-04-04T13:00:00Z'),
+        bankAccount: '654-321-987',
+        isMediaCom: true,
+    },
+    {
+        id: 5,
+        name: 'SK텔레콤',
+        regNo: '789-01-23456',
+        repName: '박정호',
+        address: '서울특별시 중구 을지로 65',
+        createdAt: new Date('2018-05-05T14:00:00Z'),
+        updatedAt: new Date('2023-05-05T14:00:00Z'),
+        bankAccount: '321-654-098',
+        isMediaCom: false,
+    },
+];
+export const personList: Person[] = [
+    {
+        id: 1,
+        companyId: 1,
+        name: '김철수',
+        team: '개발팀',
+        position: '팀장',
+        email: 'cheolsu@example.com',
+        phone: '010-1234-5678',
+        createdBy: 1,
+        updatedBy: 1,
+        createdAt: new Date('2021-01-01T10:00:00Z'),
+        updatedAt: new Date('2023-01-01T10:00:00Z'),
+    },
+    {
+        id: 2,
+        companyId: 1,
+        name: '이영희',
+        team: '마케팅팀',
+        position: '사원',
+        email: 'younghee@example.com',
+        phone: '010-2345-6789',
+        createdBy: 1,
+        updatedBy: 1,
+        createdAt: new Date('2021-02-01T10:00:00Z'),
+        updatedAt: new Date('2023-02-01T10:00:00Z'),
+    },
+    {
+        id: 3,
+        companyId: 1,
+        name: '박지훈',
+        team: '영업팀',
+        position: '과장',
+        email: 'jihun@example.com',
+        phone: '010-3456-7890',
+        createdBy: 1,
+        updatedBy: 1,
+        createdAt: new Date('2021-03-01T10:00:00Z'),
+        updatedAt: new Date('2023-03-01T10:00:00Z'),
+    },
+    {
+        id: 4,
+        companyId: 1,
+        name: '최민수',
+        team: '재무팀',
+        position: '대리',
+        email: 'minsu@example.com',
+        phone: '010-4567-8901',
+        createdBy: 1,
+        updatedBy: 1,
+        createdAt: new Date('2021-04-01T10:00:00Z'),
+        updatedAt: new Date('2023-04-01T10:00:00Z'),
+    },
+    {
+        id: 5,
+        companyId: 1,
+        name: '정지혜',
+        team: '기획팀',
+        position: '사원',
+        email: 'jihye@example.com',
+        phone: '010-5678-9012',
+        createdBy: 1,
+        updatedBy: 1,
+        createdAt: new Date('2021-05-01T10:00:00Z'),
+        updatedAt: new Date('2023-05-01T10:00:00Z'),
     },
 ];
