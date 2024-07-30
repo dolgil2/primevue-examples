@@ -47,3 +47,12 @@ h5 {
 .headerFlexBetween {
     justify-content: space-between;
 }
+
+.flexCenter {
+    flex: auto;
+    align-items: center;
+}
+
+.fullWidth {
+    width: max-content;
+}
