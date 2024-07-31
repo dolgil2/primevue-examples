@@ -185,7 +185,7 @@ const addPerson = () => {
             </Column>
             <Column field="updatedAt" header="Updated At">
                 <template #body="{ data }">
-                    {{ formatDate(data.createdAt) }}
+                    {{ formatDate(data.updatedAt) }}
                 </template>
             </Column>
         </DataTable>

@@ -46,4 +46,18 @@ interface Person {
     updatedAt: Date;
 }
 
-export type { MenuItem, Country, Company, Person };
+interface Media {
+    id: number;
+    name: string;
+    price: number;
+}
+
+interface MediaInList {
+    id: number;
+    media: number;
+    detail: string;
+    startDate: string;
+    endDate: string;
+}
+
+export type { MenuItem, Country, Company, Person, Media, MediaInList };

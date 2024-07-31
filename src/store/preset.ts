@@ -1,4 +1,4 @@
-import { Company, MenuItem, Person } from '@/interfaces';
+import { Company, MenuItem, Person, Media } from '@/interfaces';
 
 export const exampleMenu: MenuItem[] = [
     {
@@ -546,4 +546,18 @@ export const personList: Person[] = [
         createdAt: new Date('2021-05-01T10:00:00Z'),
         updatedAt: new Date('2023-05-01T10:00:00Z'),
     },
+];
+
+export const mediaList: Media[] = [
+    { id: 1, name: '178', price: 50000000 },
+    { id: 2, name: '파노라마', price: 10000000 },
+    { id: 3, name: '스크린', price: 10000000 },
+    { id: 4, name: '헬로명동', price: 10000000 },
+    { id: 5, name: '헬로로데오', price: 80000000 },
+    { id: 6, name: '제주공항', price: 50000000 },
+    { id: 7, name: '김포공항', price: 50000000 },
+    { id: 8, name: '광주공항', price: 25000000 },
+    { id: 9, name: '야립', price: 15000000 },
+    { id: 10, name: '버스쉘터', price: 3000000 },
+    { id: 11, name: '지디아', price: 10000000 },
 ];
